@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import React from "react";
 
 interface SkillDotsProps {
@@ -10,7 +11,7 @@ const SkillDots: React.FC<SkillDotsProps> = ({ level }) => {
     dots.push(
       <span
         key={i}
-        className={`text-${i < level ? "black" : "gray-400"} text-3xl`}
+        className={cn("text-3xl", i < level ? "text-black" : "text-gray-300")}
       >
         •
       </span>
